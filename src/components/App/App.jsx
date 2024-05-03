@@ -11,6 +11,12 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import BtnGoToTop from "../BtnGoToTop/BtnGoToTop";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../Layout/Layout";
+import {
+  selectError,
+  selectIsLoading,
+} from "../../redux/contacts/selectors.js";
+import { RestrictedRoute } from "../../RestrictedRoute.jsx";
+import { PrivateRoute } from "../../PrivateRoute.jsx";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 const RegisterPage = lazy(() =>
