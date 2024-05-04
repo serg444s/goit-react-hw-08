@@ -1,9 +1,10 @@
+import DocumentTitle from "../../DocumentTitle";
 import { RegisterForm } from "../../components/RegisterForm/RegisterForm";
 
 const RegisterPage = () => {
   return (
     <div>
-      <h2>Registration</h2>
+      <DocumentTitle>Registration</DocumentTitle>
       <RegisterForm />
     </div>
   );

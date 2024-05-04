@@ -40,10 +40,6 @@
   color: #888;
 }
 
-body {
-  background: linear-gradient(to bottom, #0074d9, #ffdc00);
-}
-
 .container {
   background-color: white;
   border-radius: 40px;

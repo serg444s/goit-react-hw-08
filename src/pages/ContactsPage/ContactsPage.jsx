@@ -1,7 +1,9 @@
+import DocumentTitle from "../../DocumentTitle";
+
 const ContactsPage = () => {
   return (
     <div>
-      <h2>Contacts Page</h2>
+      <DocumentTitle>Your contacts list</DocumentTitle>
     </div>
   );
 };

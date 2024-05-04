@@ -1,9 +1,10 @@
 import LoginForm from "../../components/LoginForm/LoginForm";
+import DocumentTitle from "../../DocumentTitle";
 
 const LoginPage = () => {
   return (
     <div>
-      <h2>Login Form</h2>
+      <DocumentTitle>Login</DocumentTitle>
       <LoginForm />
     </div>
   );

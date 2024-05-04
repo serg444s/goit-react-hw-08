@@ -17,6 +17,7 @@ import {
 } from "../../redux/contacts/selectors.js";
 import { RestrictedRoute } from "../../RestrictedRoute.jsx";
 import { PrivateRoute } from "../../PrivateRoute.jsx";
+import { fetchContacts } from "../../redux/contacts/operations.js";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 const RegisterPage = lazy(() =>

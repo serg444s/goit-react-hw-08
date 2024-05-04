@@ -1,0 +1,7 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  background: linear-gradient(to bottom, black, darkslategray);
+  border-radius: 32px;
+}
