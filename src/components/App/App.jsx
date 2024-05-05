@@ -18,6 +18,8 @@ import {
 import { RestrictedRoute } from "../../RestrictedRoute.jsx";
 import { PrivateRoute } from "../../PrivateRoute.jsx";
 import { fetchContacts } from "../../redux/contacts/operations.js";
+import { refreshUser } from "../../redux/auth/operations.js";
+import { selectIsRefreshing } from "../../redux/auth/selectors.js";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
 const RegisterPage = lazy(() =>
@@ -30,14 +32,18 @@ const ContactsPage = lazy(() =>
 
 function App() {
   const dispatch = useDispatch();
+  const { isRefreshing } = useSelector(selectIsRefreshing);
+
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <p>Refreshing user...</p>
+  ) : (
     <>
       <Layout>
         <Routes>
