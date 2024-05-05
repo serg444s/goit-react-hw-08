@@ -1,5 +1,5 @@
 import DocumentTitle from "../../DocumentTitle";
-import { RegisterForm } from "../../components/RegisterForm/RegisterForm";
+import RegisterForm from "../../components/RegistrationForm/RegistrationForm";
 
 const RegisterPage = () => {
   return (
