@@ -1,7 +1,8 @@
 .container {
   width: 960px;
+  height: 960px;
   margin: 0 auto;
   padding: 16px;
-  background: linear-gradient(to bottom, black, darkslategray);
   border-radius: 32px;
+  background-color: rgb(170, 224, 233);
 }
