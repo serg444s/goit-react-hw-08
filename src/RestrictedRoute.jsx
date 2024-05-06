@@ -7,5 +7,5 @@ export const RestrictedRoute = ({ component: Component, redirectTo = "/" }) => {
   const isRefreshing = useSelector(selectIsRefreshing);
   const shouldRedirect = !isLoggedIn && !isRefreshing;
 
-  return shouldRedirect ? <Navigate to={redirectTo} /> : Component;
+  return shouldRedirect ? Component : <Navigate to={redirectTo} />;
 };

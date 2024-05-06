@@ -31,7 +31,7 @@ const ContactsPage = lazy(() =>
 
 function App() {
   const dispatch = useDispatch();
-  const { isRefreshing } = useSelector(selectIsRefreshing);
+  const isRefreshing = useSelector(selectIsRefreshing);
 
   // const isLoading = useSelector(selectIsLoading);
   // const error = useSelector(selectError);
