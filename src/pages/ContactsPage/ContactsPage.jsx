@@ -6,7 +6,8 @@ import { fetchContacts } from "../../redux/contacts/operations";
 import ContactList from "../../components/ContactList/ContactList";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import SearchBox from "../../components/SearchBox/SearchBox";
-
+import { Toaster } from "react-hot-toast";
+import Loader from "../../components/Loader/Loader";
 const ContactsPage = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
@@ -18,10 +19,11 @@ const ContactsPage = () => {
   return (
     <div>
       <DocumentTitle>Contacts</DocumentTitle>
-      <div>{isLoading && "Request in progress..."}</div>
       <ContactForm />
       <SearchBox />
       <ContactList />
+      {isLoading && <Loader />}
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };
