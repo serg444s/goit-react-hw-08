@@ -5,14 +5,27 @@ export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get("/contacts");
-      console.log(response);
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      const res = await axios.get("/contacts");
+      console.log(res.data);
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
+
+// export const fetchContacts = createAsyncThunk(
+//   "contacts/fetchAll",
+//   async (_, thunkAPI) => {
+//     try {
+//       const response = await axios.get("/contacts");
+//       console.log(response);
+//       return response.data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );
 
 export const addContact = createAsyncThunk(
   "contacts/addContact",
