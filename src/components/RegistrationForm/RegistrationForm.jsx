@@ -7,7 +7,10 @@ const RegisterForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    if (form.elements.password.value.length > 6) {
+    if (
+      form.elements.password.value.length > 7 &&
+      form.elements.email.value.length > 13
+    ) {
       dispatch(
         register({
           name: form.elements.name.value,
@@ -17,7 +20,7 @@ const RegisterForm = () => {
       );
       form.reset();
     } else {
-      toast.error("Minimum password length (7)");
+      toast.error("Min length: password(7), email(13)");
     }
   };
 
