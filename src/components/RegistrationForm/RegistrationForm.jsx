@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 import toast from "react-hot-toast";
+import css from "./RegistrationForm.module.css";
+
 const RegisterForm = () => {
   const dispatch = useDispatch();
 
@@ -25,7 +27,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={css.container}>
       <label>
         Username
         <input type="text" name="name" required />
@@ -38,7 +40,9 @@ const RegisterForm = () => {
         Password
         <input type="password" name="password" required />
       </label>
-      <button type="submit">Register</button>
+      <button type="submit" className={css.btn}>
+        Register
+      </button>
     </form>
   );
 };
